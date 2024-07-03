@@ -59,7 +59,7 @@ complex128_t hankel_2_complex( complex128_t nu, complex128_t z, int* info_ ) {
 }
 
 complex128_t bessel_I_complex( complex128_t nu, complex128_t z, int* info_ ) {
-    return cexp( nu * M_PI * I * 0.5 ) * bessel_J_complex( nu, z * cexp( -M_PI * I * 0.5, info_ ) );
+    return cexp( nu * M_PI * I * 0.5 ) * bessel_J_complex( nu, z * cexp( -M_PI * I * 0.5 ), info_ );
 }
 
 complex128_t bessel_I_ratio( complex128_t nu, complex128_t z, int* info_ ) {
