@@ -1,26 +1,11 @@
-#include <stdio.h>
-#include <complex.h>
+#include "bessel.h"
+#include <stddef.h>
 #include <math.h>
-#include <omp.h>
 
 #ifndef M_PI
 #define M_PI (3.14159265358979323846)
 #endif
 
-typedef _Complex double complex128_t;
-
-/*
-! info: output, integer, the output condition
-!   info=0:  normal output; relative error of zans is less than 
-!            MAX(epsilon1,1E3*epsilon0)
-!   info=10: zans is not reliable because of one of the following reasons.
-!            (1) There is a possibility of an overflow.
-!            (2) There is a possibility of an underflow.
-!            (3) The precision of zans is not sufficient.
-!            (4) The output zans is indefinite theoretically.
-!                Function zbessel1(zunit,0) is indefinite for example.
-!   info=20: out of range. The cases of ABS(re_zz)>ai_arg_m for example.
-*/
 extern void _FORTRAN_bessel1( const complex128_t* znu, const complex128_t* zz, complex128_t* zans, int* info );
 extern void _FORTRAN_bessel2( const complex128_t* znu, const complex128_t* zz, complex128_t* zans, int* info );
 extern void _FORTRAN_hankel1( const complex128_t* znu, const complex128_t* zz, complex128_t* zans, int* info );
