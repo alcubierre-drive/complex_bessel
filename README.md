@@ -14,3 +14,9 @@ see [DLMF](https://dlmf.nist.gov/10.27). It also includes an implementation of
 in both the implementation via $`I_\nu(z)`$ as well as the [continued fraction
 implementation](https://dlmf.nist.gov/10.33). Those functions are accessible
 through ``bessel_I_ratio`` and ``bessel_I_ratio_iter``.
+
+# License
+
+This wrapper, including the continued fraction expansion, is licensed under the
+[GPLv3](LICENSE.md). The [Fortran algorithm](mod_zbes.f90) published by Masao
+Kodama in an ACM journal carries the [ACM license](LICENSE_mod_zbes.md).
