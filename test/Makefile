@@ -1,3 +1,5 @@
 CC ?= gcc
+CFLAGS +=
+LDFLAGS +=
 use: use.c
-	$(CC) $^ -o $@ -I.. -L.. -Wl,-rpath=.. -lbessel
+	$(CC) $(CFLAGS) $(LDFLAGS) $^ -o $@ -I.. -L.. -Wl,-rpath=.. -lbessel

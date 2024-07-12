@@ -15,6 +15,13 @@ in both the implementation via $`I_\nu(z)`$ as well as the [continued fraction
 implementation](https://dlmf.nist.gov/10.33). Those functions are accessible
 through ``bessel_I_ratio`` and ``bessel_I_ratio_iter``.
 
+For a very short demonstration of how to use the library, see
+[test/use.c](test/use.c). If compiling the test via ``CFLAGS=-DCOMPARE_TO_FLINT
+LDFLAGS=-lflint make``, not only the internal comparison of $`I_\nu(z)`$ with
+its continued fraction expansion is considered, but also one to the [FLINT
+library](https://flintlib.org/). FLINT includes an enormous amount of special
+functions for (complex) arbitrary precision arguments.
+
 # License
 
 This wrapper, including the continued fraction expansion, is licensed under the
